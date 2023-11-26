@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1 class="title">Quiz Game</h1>
+
+    <div id="setupScreen" class="container">
+        <h2>Select Players</h2>
+        <div class="selectPlayers">
+          <input type="number" min="1" max="4" id="numPlayers" placeholder="Enter the number of players">
+          <button id="startNewGame">Next</button>
+          <p id="invalidPlayersMessage" style="color: red; display: none;">Invalid number of players. Please enter a number between 1 and 4.</p>
+        </div>
+    </div>
+
+ 
+    <div id="subject" class="container" style="display: none;">
+        <h2>Choose Subject</h2>
+        <button id='selectHTML'>>HTML</button>
+        <button id='selectCSS'>CSS</button>
+        <button id='selectJS'>JavaScript</button>
+        <button id="goBack" >Prev</button>
+    </div>
+    
+    <div id="gameScreen" class="container" style="display: none;">
+      <div class="gameContainer">
+        <div class="game">
+          <h2>Gameplay</h2>
+          <div id="questionContainer"></div>
+          <div id="options"></div>
+          <p id="timer">Time Left: <span id="timeLeft"></span></p>
+          <button id="continueBtn" disabled>Continue</button>
+        </div>
+        <div class="infoPanel">
+          <p id="currentPlayerName"></p>
+          <div id="playersContainer"></div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div id="endGameScreen" class="container" style="display: none;">
+      <h2>Game End</h2>
+      <div id="winners"></div>
+      <button id="startNewGameBtn">Start a New Game</button>
+      <button id="reviewAnswersBtn">Review Answers</button>
+    </div>
+    
+    <div id="reviewScreen" class="container" style="display: none;">
+      <h2>Review Answers</h2>
+      <div id="reviewContainer"></div>
+      <button id="backToGameBtn">Start a new Game</button>
+    </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
